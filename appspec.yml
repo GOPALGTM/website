@@ -1,0 +1,38 @@
+version: 0.0
+os: linux
+files:
+    - source: /
+      destination: /home/ubuntu/project
+
+hooks:
+   
+    BeforeInstall:
+        - location: beforeinstall.sh
+            timeout: 300
+            runas: ubuntu
+
+    AfterInstall:
+         - location: afterinstall.sh
+            timeout: 300
+            runas: ubuntu
+         
+         - location:  /etc/systemd/system/gunicorn.socket
+            timeout: 300
+            runas: ubuntu
+            
+         - location: /etc/systemd/system/gunicorn.socket
+            timeout: 300
+            runas: ubuntu
+            
+         - location: /scripts/command.sh
+            timeout: 300
+            runas: ubuntu
+            
+         - location: /etc/nginx/sites-available/myproject
+            timeout: 300
+            runas: ubuntu
+            
+    ApplicationStart:
+         - location: scripts/start_server.sh
+            timeout: 300
+            runas: ubuntu
