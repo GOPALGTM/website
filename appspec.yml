@@ -28,10 +28,6 @@ hooks:
             timeout: 300
             runas: ubuntu
             
-         - location: /etc/nginx/sites-available/myproject
-            timeout: 300
-            runas: ubuntu
-            
     ApplicationStart:
          - location: scripts/start_server.sh
             timeout: 300
