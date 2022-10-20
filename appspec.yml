@@ -21,7 +21,7 @@ hooks:
   AfterInstall:
     - location: scripts/install_com.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
       
   ApplicationStart:
     - location: scripts/start_server.sh
@@ -31,5 +31,5 @@ hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
       
