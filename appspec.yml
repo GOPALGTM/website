@@ -7,7 +7,7 @@ hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
       timeout: 300
-      runas: root
+      runas: ubuntu
       
   ApplicationStart:
     - location: scripts/start_server
