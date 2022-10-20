@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/project 
+    destination: /home/ubuntu/project
     
 permissions:
   - object: /home/ubuntu/project
@@ -11,7 +11,7 @@ permissions:
     mode: 777
     
 hooks:
-  BeforeInstall:
+  AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
