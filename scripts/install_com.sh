@@ -1,4 +1,6 @@
 #!bin/bash
 cd /home/ubuntu/project
-sudo pip install django gunicorn
-sudo ufw allow 8000
+virtualenv myprojectenv
+source venv/bin/activate
+pip install django gunicorn
+ufw allow 8000
