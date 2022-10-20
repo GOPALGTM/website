@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /project 
+    destination: /home/ubuntu/project 
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
