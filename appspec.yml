@@ -14,7 +14,7 @@ hooks:
     
   AfterInstall:
     - location: scripts/install_com.sh
-      timeout: 300
+      timeout: 600
       runas: root
       
   ApplicationStart:
