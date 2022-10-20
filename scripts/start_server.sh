@@ -1,3 +1,4 @@
 #!bin/bash
-systemctl start nginx
+cd /home/ubuntu/project
+sudo systemctl start nginx
 
