@@ -4,13 +4,18 @@ files:
   - source: /
     destination: /home/ubuntu/project
     
-permissions:
-  - object: /home/ubuntu/project
-    owner: root
-    group: root
-    mode: 777
+# permissions:
+#   - object: /home/ubuntu/project
+#     owner: root
+#     group: root
+#     mode: 777
     
 hooks:
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 300
+      runas: root
+      
   AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
@@ -21,7 +26,3 @@ hooks:
       timeout: 300
       runas: root
       
-  ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
-      runas: root
