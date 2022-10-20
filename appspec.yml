@@ -11,9 +11,15 @@ files:
 #     mode: 777
     
 hooks:
+
+  beforeInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: root
+  
     
   AfterInstall:
-    - location: scripts/install_dependencies.sh
+    - location: scripts/install_com.sh
       timeout: 300
       runas: root
       
