@@ -1,5 +1,5 @@
 #!bin/bash
-cd /home/ubuntu
+cd /home/ubuntu/project
 virtualenv myprojectenv
 source venv/bin/activate
 pip install django gunicorn
