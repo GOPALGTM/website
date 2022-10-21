@@ -1,3 +1,3 @@
 #!bin/bash
 cd /home/ubuntu
-systemctl nginx stop
+sudo systemctl nginx stop
